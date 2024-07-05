@@ -5,6 +5,7 @@ import ProductDetail from '../views/product/Detail.vue'
 import Cart from '../views/cart/Index.vue'
 import Login from '@/components/Login.vue'
 import Home from '@/views/Home.vue'
+import About from '@/views/About.vue'
 import NotFound from '../views/errors/404.vue'
 
 Vue.use(VueRouter)
@@ -33,6 +34,11 @@ const routes = [{
     path: '/home',
     name: 'home',
     component: Home
+  },
+  {
+    path: '/about',
+    name: 'about',
+    component: About
   },
   {
     path: '*',

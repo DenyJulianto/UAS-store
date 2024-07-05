@@ -2,9 +2,9 @@
     <div id="home">
       <div class="hero">
         <h1>Selamat Datang Di Jmok Store</h1>
-        <p>Your one-stop shop for all your needs!</p>
+        <p>Toko serba ada untuk semua kebutuhan Anda!</p>
         <router-link :to="{ name: 'product' }">
-          <button>Shop Now</button>
+          <button>Belanja Sekarang</button>
         </router-link>
       </div>
       <div class="featured-products">
@@ -29,7 +29,7 @@
             id: 1,
             name: 'Product 1',
             price: 29.99,
-            image: 'https://via.placeholder.com/150'
+            image: '/img/photo-1.jpg'
           },
           {
             id: 2,
