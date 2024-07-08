@@ -7,17 +7,18 @@
       <div class="about-content">
         <div class="about-section">
           <i class="icon icon-store"></i>
-          <p>Welcome to Jmok Store, your one-stop shop for all your needs. We pride ourselves on providing the best products and services to our customers.</p>
+          <p>Selamat datang di Jmok Store, toko serba ada untuk semua kebutuhan Anda. Kami bangga dapat menyediakan produk dan layanan terbaik kepada pelanggan kami.</p>
         </div>
         <div class="about-section">
           <i class="icon icon-quality"></i>
-          <p>Our mission is to offer a wide range of quality products at affordable prices, ensuring a great shopping experience for everyone.</p>
+          <p>Misi kami adalah menawarkan berbagai macam produk berkualitas dengan harga terjangkau, memastikan pengalaman berbelanja yang menyenangkan bagi semua orang.
+          </p>
         </div>
         <div class="about-section">
           <i class="icon icon-heart"></i>
-          <p>At Jmok Store, we believe in building long-lasting relationships with our customers through exceptional service and commitment to quality.</p>
+          <p>Di Jmok Store, kami percaya dalam membangun hubungan jangka panjang dengan pelanggan kami melalui layanan luar biasa dan komitmen terhadap kualitas.</p>
         </div>
-        <p class="about-footer">Thank you for choosing Jmok Store. We look forward to serving you!</p>
+        <p class="about-footer">Terima kasih telah memilih Toko Jmok. Kami berharap dapat melayani Anda!</p>
       </div>
     </div>
   </template>
@@ -93,4 +94,3 @@
     font-size: 18px;
   }
   </style>
-  

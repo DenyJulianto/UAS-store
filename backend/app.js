@@ -40,7 +40,7 @@ app.get('/', (req, res) => {
 
 require('./app/routes/product.routes')(app)
 require('./app/routes/order.routes')(app)
-require('./routes/login.routes')(app);
+// require('./routes/login.routes')(app);
 
 const PORT = process.env.PORT || 8000
 app.listen(PORT, () => {

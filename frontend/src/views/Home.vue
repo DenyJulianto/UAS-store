@@ -27,25 +27,25 @@
         featuredProducts: [
           {
             id: 1,
-            name: 'Product 1',
+            name: 'Produk 1',
             price: 29.99,
             image: '/img/photo-1.jpg'
           },
           {
             id: 2,
-            name: 'Product 2',
+            name: 'Produk 2',
             price: 19.99,
             image: 'https://via.placeholder.com/150'
           },
           {
             id: 3,
-            name: 'Product 3',
+            name: 'Produk 3',
             price: 39.99,
             image: 'https://via.placeholder.com/150'
           },
           {
             id: 4,
-            name: 'Product 4',
+            name: 'Produk 4',
             price: 49.99,
             image: 'https://via.placeholder.com/150'
           }
@@ -129,4 +129,3 @@
     color: #555;
   }
   </style>
-  
