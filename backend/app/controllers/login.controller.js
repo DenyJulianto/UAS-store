@@ -1,4 +1,5 @@
-const User = require('../models/user.model'); // Asumsikan Anda memiliki model user
+const db = require('../models');
+const User = db.user;
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
@@ -35,7 +36,7 @@ exports.login = async (req, res) => {
             token,
         });
     } catch (error) {
-        res.status(500).send({ message: error.message });
+        res.status(500).send({ message: error.message || "Some error occurred while logging in." });
     }
 };
 
