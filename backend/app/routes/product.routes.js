@@ -6,6 +6,7 @@ module.exports = (app) => {
     // in
     router.get('/', products.findAll)
     router.get('/:id', products.findOne)
+    //router.get('/search', products.search)
 
     app.use('/api/products', router)
 }

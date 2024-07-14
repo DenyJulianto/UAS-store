@@ -1,7 +1,7 @@
 <template>
     <div id="home">
       <div class="hero">
-        <h1>Selamat Datang Di Jmok Store</h1>
+        <h1>Selamat Datang Di Jk Store</h1>
         <p>Toko serba ada untuk semua kebutuhan Anda!</p>
         <router-link :to="{ name: 'product' }">
           <button>Belanja Sekarang</button>

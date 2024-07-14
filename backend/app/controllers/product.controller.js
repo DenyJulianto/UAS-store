@@ -24,3 +24,19 @@ exports.findOne = (req, res) => {
             })
         })
 }
+
+exports.searchProducts = (req, res) => {
+    const query = req.query.q;
+
+    Product.find({
+        name: { $regex: query, $options: 'i' } // Pencarian berdasarkan nama produk (case-insensitive)
+    })
+    .then(products => {
+        res.send(products);
+    })
+    .catch(err => {
+        res.status(500).send({
+            message: err.message || "Some error occurred while searching for products."
+        });
+    });
+};

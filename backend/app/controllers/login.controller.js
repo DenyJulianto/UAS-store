@@ -1,7 +1,15 @@
 const db = require('../models');
 const User = db.user;
-const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
+
+// Fungsi sederhana untuk membuat token (tidak aman, hanya untuk contoh)
+function generateToken(userId) {
+    return `${userId}-${new Date().getTime()}`;
+}
+
+// Fungsi sederhana untuk verifikasi password (tidak aman, hanya untuk contoh)
+function isPasswordValid(inputPassword, storedPassword) {
+    return inputPassword === storedPassword;
+}
 
 exports.login = async (req, res) => {
     try {
@@ -15,16 +23,12 @@ exports.login = async (req, res) => {
         }
 
         // Verifikasi password
-        const isPasswordValid = await bcrypt.compare(password, user.password);
-
-        if (!isPasswordValid) {
+        if (!isPasswordValid(password, user.password)) {
             return res.status(401).send({ message: 'Invalid password' });
         }
 
-        // Buat token JWT
-        const token = jwt.sign({ id: user._id }, process.env.SECRET_KEY, {
-            expiresIn: '1h', // Token valid selama 1 jam
-        });
+        // Buat token sederhana (tidak aman)
+        const token = generateToken(user._id);
 
         res.status(200).send({
             message: 'Login successful',

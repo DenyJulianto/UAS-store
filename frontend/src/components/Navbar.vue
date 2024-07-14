@@ -4,7 +4,7 @@
       <button @click="toggleSidebar">☰</button>
     </div>
     <router-link :to="{ name: 'product' }" id="products-link">
-      <h1>Jmok Store</h1>
+      <h1>Jk Store</h1>
     </router-link>
     <div id="search-bar">
       <input type="text" placeholder="Search..." v-model="searchQuery">
@@ -26,6 +26,8 @@
 </template>
 
 <script>
+import axios from 'axios'; // Pastikan Anda telah menginstal axios dengan `npm install axios`
+
 export default {
   data() {
     return {
@@ -35,8 +37,16 @@ export default {
   },
   methods: {
     handleSearch() {
-      // Implementasikan logika pencarian di sini
-      console.log('Searching for:', this.searchQuery);
+      axios.get(`/api/products/search?q=${this.searchQuery}`)
+        .then(response => {
+          console.log('Search results:', response.data);
+          // Tampilkan hasil pencarian di sini
+          // Misalnya, Anda bisa menyimpan hasil dalam data dan menampilkan di komponen lain
+          this.$emit('search-results', response.data);
+        })
+        .catch(error => {
+          console.error('There was an error with the search!', error);
+        });
     },
     toggleSidebar() {
       this.sidebarVisible = !this.sidebarVisible;
