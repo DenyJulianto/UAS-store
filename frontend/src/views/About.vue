@@ -1,8 +1,6 @@
 <template>
     <div class="about-container">
       <div class="about-header">
-        <img src="https://via.placeholder.com/800x200" alt="About Jmok Store" class="about-image">
-        <h1 class="about-title">About Jmok Store</h1>
       </div>
       <div class="about-content">
         <div class="about-section">
