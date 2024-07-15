@@ -41,8 +41,8 @@ export default {
         this.email = '';
         this.password = '';
       } catch (error) {
-        console.error('There was an error!', error);
-        alert('Login failed. Please check your email and password.');
+        console.error('Ada kesalahan!', error);
+        alert('Gagal masuk. Silakan periksa email dan kata sandi Anda.');
       }
     }
   }
