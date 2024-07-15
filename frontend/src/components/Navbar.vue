@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import axios from 'axios'; // Pastikan Anda telah menginstal axios dengan `npm install axios`
+import axios from 'axios'; 
 
 export default {
   data() {
@@ -40,8 +40,6 @@ export default {
       axios.get(`/api/products/search?q=${this.searchQuery}`)
         .then(response => {
           console.log('Search results:', response.data);
-          // Tampilkan hasil pencarian di sini
-          // Misalnya, Anda bisa menyimpan hasil dalam data dan menampilkan di komponen lain
           this.$emit('search-results', response.data);
         })
         .catch(error => {
@@ -86,7 +84,7 @@ export default {
   color: #41B883;
   font-size: 22px;
   text-decoration: none;
-  margin-left: 50px; /* Jarak antara sidebar dan tulisan Jmok Store */
+  margin-left: 50px; 
 }
 #products-link h1 {
   margin: 0;
@@ -125,7 +123,7 @@ export default {
 #sidebar {
   position: fixed;
   top: 75px;
-  left: -250px; /* Awalnya tersembunyi di sebelah kiri */
+  left: -250px; 
   width: 250px;
   height: calc(100% - 75px);
   background-color: #f5f5f5;
@@ -133,10 +131,10 @@ export default {
   padding: 20px;
   box-sizing: border-box;
   z-index: 1000;
-  transition: left 0.3s ease; /* Animasi transisi */
+  transition: left 0.3s ease; 
 }
 #sidebar.sidebar-visible {
-  left: 0; /* Posisikan di dalam layar saat terlihat */
+  left: 0; 
 }
 #sidebar ul {
   list-style: none;

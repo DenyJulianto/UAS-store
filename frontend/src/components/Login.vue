@@ -36,16 +36,12 @@ export default {
           password: this.password
         });
         console.log(response.data);
-        // Tampilkan pesan berhasil login
         alert('Login successful');
-        // Arahkan ke halaman produk
         this.$router.push({ name: 'product' });
-        // Reset form setelah submit
         this.email = '';
         this.password = '';
       } catch (error) {
         console.error('There was an error!', error);
-        // Tampilkan pesan error
         alert('Login failed. Please check your email and password.');
       }
     }
